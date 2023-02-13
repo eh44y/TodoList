@@ -1,0 +1,51 @@
+.todoItem-area {
+  display: flex;
+  align-items: center;
+  padding: 0.8em;
+
+  &:nth-child(even) {
+    background: #ece2e1;
+  } // .todoItem-area:nth-child(even)
+
+  .checkBox {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+
+    svg {
+      font-size: 1.3em;
+    } // svg
+
+    .text {
+      flex: 1;
+      margin-left: 20px;
+      user-select: none;
+    } // .text
+
+    &.checked {
+      svg {
+        color: #7c99ac;
+      }
+      .text {
+        color: #adb5bd;
+        text-decoration: line-through;
+      }
+    }
+  } // .checkBox
+
+  .remove {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    color: #ff6b6b;
+    cursor: pointer;
+
+    &:hover {
+      color: #ff8787;
+    } // .remove:hover
+  } // .remove
+  & + & {
+    border-top: 1px solid #d2d4e5;
+  } // element 사이사이에 테두리를 넣어줌
+} // .todoItem-area

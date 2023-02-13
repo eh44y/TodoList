@@ -1,0 +1,27 @@
+.todoList-area {
+  width: 512px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.todoList-area .app-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 3em;
+  background: #7c99ac;
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.todoList-area .content {
+  background: #fff;
+}
+/*# sourceMappingURL=TodoApp.css.map */
