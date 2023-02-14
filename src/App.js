@@ -15,15 +15,18 @@ const App = () => {
 
   // 고윳값으로 사용될 ID, ref를 사용하여 변수 담기
   const nextID = useRef(5);
-  const onInsert = useCallback((text) => {
-    const todo = {
-      id: nextID.current,
-      text,
-      checked: false,
-    };
-    setTodos(todos.concat(todo));
-    nextID.current += 1; // nextID 1씩 더하기
-  });
+  const onInsert = useCallback(
+    (text) => {
+      const todo = {
+        id: nextID.current,
+        text,
+        checked: false,
+      };
+      setTodos(todos.concat(todo));
+      nextID.current += 1; // nextID 1씩 더하기
+    },
+    [todos]
+  );
 
   const onRemove = useCallback(
     (id) => {
